@@ -4,13 +4,13 @@
 
 .page {
   color: var(--text-color);
-  font-family: var(--page-font-family);
+  font-family: var(--font-family);
   background-color: var(--page-background-color);
-  background-image: var(--page-background-image);
+  background-image: var(--page-background-image) no-repeat top center;
   font-size: 18px;
   line-height: 23.4px;
   background-position: center;
-  background-size: cover;
+  background-size: auto 768px;
   background-attachment: fixed;
 }
 
@@ -178,9 +178,8 @@
 }
 
 .header {
-  padding-block: 10px;
-  display: grid;
-  block-size: 100vh;
+  padding: 0 20px;
+  position: relative;
   align-items: start;
 }
 
@@ -240,6 +239,9 @@
 
 .footer {
   place-items: center;
+  padding: 282px 20px;
+  position: relative;
+  text-align: center;
 }
 
 @media (width >= 768px) {
@@ -292,3 +294,4 @@
     flex-direction: row;
   }
 }
+
