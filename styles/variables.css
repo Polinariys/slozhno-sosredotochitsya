@@ -2,3 +2,61 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --font-family: "IBM Plex mono";
+
+  --color-light: #fff1f7;
+
+  --color-pink: #f1b2ce;
+  --color-pink-2: #ffc2e6;
+  --color-pink-3: #ff8dcb;
+
+  --color-purple: #db00ff;
+  --color-neon: #ff0070;
+  --color-purple-cherry: #ff007040;
+
+  --color-black: #000028;
+  --color-gray: #353430;
+  --color-gray-1: #35343040;
+
+  --text-color: var(--color-pink);
+  --brand-color: var(--color-purple);
+  --secondary-color: var(--color-neon);
+
+  --accent-color: var(--color-neon);
+  --secondary-cherry: var(--color-purple-cherry);
+  --highlight-color: var(--color-black);
+  --page-background-image: url("../images/cover-image.png");
+  --page-background-color: var(--color-black);
+
+  --rec-visibility: visible; /* видимость прямоугольника. CSS-свойство, отвечающее только за видимость элементов — это свойство visibility. Оно принимает следующие значения: visibility: visible; — элемент видимый по умолчанию; visibility: hidden; — элемент становится невидимым, находясь при этом на своем месте. */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--color-black);
+    --page-background-image: url("../images/cover-image-dark.png");
+    --text-color: var(--color-pink);
+    --brand-color: var(--color-purple);
+    --secondary-color: var(--color-neon);
+    --accent-color: var(--color-neon);
+    --secondary-cherry: var(--color-purple-cherry);
+    --highlight-color: var(--color-black);
+    --rec-visibility: visible;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-background-color: var(--color-light);
+    --page-background-image: url("../images/cover-image-light.png");
+    --brand-color: var(--color-pink-2);
+    --accent-color: var(--color-pink-3);
+    --text-color: var(--color-gray);
+    --highlight-color: var(--color-gray);
+    --secondary-color: var(--color-gray);
+    --secondary-color-1: var(--color-gray-1);
+    --rec-visibility: hidden;
+  }
+}
