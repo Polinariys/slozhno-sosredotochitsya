@@ -11,11 +11,25 @@
   */
   --page-background-color: var(--color-light);
   --page-background-image: url("../images/cover-image-light.png");
-  --accent-color: var(--color-pink-3);
-  --brand-color: var(--color-pink-2);
+  --accent-color: var(--color-rose);
+  --brand-color: var(--color-powdery);
   --text-color: var(--color-gray);
   --highlight-color: var(--color-gray);
   --secondary-color: var(--color-gray);
-  --secondary-color-1: var(--color-gray-1);
+  --secondary-color-1: var(--color-transparent_grey);
   --rec-visibility: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-background-color: var(--color-light);
+    --page-background-image: url("../images/cover-image-light.png");
+    --brand-color: var(--color-powdery);
+    --accent-color: var(--color-rose);
+    --text-color: var(--color-gray);
+    --highlight-color: var(--color-gray);
+    --secondary-color: var(--color-gray);
+    --secondary-color-1: var(--color-transparent_grey);
+    --rec-visibility: hidden;
+  }
 }
