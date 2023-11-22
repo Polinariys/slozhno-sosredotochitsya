@@ -19,3 +19,17 @@
   --secondary-cherry: var(--color-purple-cherry);
   --rec-visibility: visible;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--color-black);
+    --page-background-image: url("../images/cover-image-dark.png");
+    --text-color: var(--color-pink);
+    --brand-color: var(--color-purple);
+    --secondary-color: var(--color-neon);
+    --accent-color: var(--color-neon);
+    --secondary-cherry: var(--color-purple-cherry);
+    --highlight-color: var(--color-black);
+    --rec-visibility: visible;
+  }
+}
