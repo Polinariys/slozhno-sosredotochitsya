@@ -10,14 +10,15 @@
   font-size: 18px;
   line-height: 23.4px;
   background-position: center;
-  background-size: auto 768px;
+  background-size: cover 768px;
   background-attachment: fixed;
 }
 
 .cover {
   display: grid;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  min-block-size: 100vh;
+  height: 100vh;
+  min-height: 667px;
 }
 
 .focus {
@@ -55,6 +56,7 @@
   gap: 10px;
   inset-inline-end: 20px;
   inset-block-start: 10px;
+  text-transform: uppercase;
 }
 
 .rec::before {
@@ -67,37 +69,10 @@
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   background: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
-}
-
-@media (width >= 768px) {
-  .rec {
-    inset-inline-end: 28px;
-    inset-block-start: 20px;
-  }
-}
-
-.page-title {
-  color: var(--brand-color);
-  font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-@media (width >= 768px) {
-  .page-title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-}
-
-@media (width >= 1024px) {
-  .page-title {
-    text-shadow: 4px 4px 0 var(--color-neon);
-  }
 }
 
 .title {
@@ -115,18 +90,6 @@
 .section {
   display: grid;
   gap: 20px;
-}
-
-@media (width >= 768px) {
-  .section {
-    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
-  }
-}
-
-@media (width >= 1024px) {
-  .section {
-    column-gap: 30px;
-  }
 }
 
 .section-gallery {
@@ -152,23 +115,6 @@
   gap: 10px;
 }
 
-@media (width >= 768px) {
-  .photo-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .photo-list__item:first-child,
-  .photo-list__item:last-child {
-    grid-column-start: span 2;
-  }
-
-  .photo-list__item:nth-child(2),
-  .photo-list__item:nth-child(3) {
-    grid-row-start: span 2;
-  }
-}
-
 .photo-list__item-img {
   display: block;
   object-fit: cover;
@@ -184,6 +130,11 @@
 }
 
 .header__theme-menu {
+  /*justify-self: center;
+  margin-inline-start: 20px;
+  margin-block-start: 20px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr; */
   justify-self: end;
   margin-block: 65px;
 }
@@ -238,10 +189,59 @@
 }
 
 .footer {
-  place-items: center;
-  padding: 282px 20px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
   position: relative;
   text-align: center;
+  height: 100vh;
+  min-height: 667px;
+}
+
+@media (width >= 768px) {
+  .rec {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
+  }
+}
+
+.page-title {
+  color: var(--brand-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .page-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 768px) {
+  .section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+  }
+}
+
+@media (width >= 768px) {
+  .photo-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .photo-list__item:first-child,
+  .photo-list__item:last-child {
+    grid-column-start: span 2;
+  }
+
+  .photo-list__item:nth-child(2),
+  .photo-list__item:nth-child(3) {
+    grid-row-start: span 2;
+  }
 }
 
 @media (width >= 768px) {
@@ -262,11 +262,6 @@
     padding-inline-start: 0;
   }
 
-  .header__theme-menu {
-    margin-block-start: 170px;
-    margin-block-end: 70px;
-  }
-
   .header__title {
     justify-self: end;
     inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
@@ -283,15 +278,18 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .header__theme-menu {
-    justify-self: center;
-    margin-inline-start: 20px;
-    margin-block-start: 0;
-    margin-block-end: 215px;
-  }
-
   .header__theme-menu-list {
     flex-direction: row;
   }
 }
 
+@media (width >= 1024px) {
+  .page-title {
+    text-shadow: 4px 4px 0 var(--color-neon);
+  }
+}
+@media (width >= 1024px) {
+  .section {
+    column-gap: 30px;
+  }
+}
