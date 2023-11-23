@@ -71,7 +71,7 @@
 
 .rec {
   position: absolute;
-  visibility: var(--rec-decor-visibility, visible);
+  visibility: var(--rec-visibility, visible);
   display: inline-flex;
   align-items: center;
   gap: 10px;
