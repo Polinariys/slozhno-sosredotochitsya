@@ -25,11 +25,32 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .decorated-zone {
   position: relative;
 }
 
 .decorated-zone::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: 25px;
+  block-size: 25px;
   border-inline-end: 1px solid var(--secondary-color);
   border-block-start: 1px solid var(--secondary-color);
   inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
@@ -130,18 +151,13 @@
 }
 
 .header__theme-menu {
-  /*justify-self: center;
-  margin-inline-start: 20px;
-  margin-block-start: 20px;
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr; */
-  justify-self: end;
+  justify-self: center;
   margin-block: 65px;
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 12px;
 }
 
@@ -200,19 +216,19 @@
   min-height: 667px;
 }
 
-@media (width >= 768px) {
-  .rec {
-    inset-inline-end: 28px;
-    inset-block-start: 20px;
-  }
-}
-
 .page-title {
   color: var(--brand-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .rec {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
+  }
 }
 
 @media (width >= 768px) {
@@ -259,7 +275,9 @@
   }
 
   .header {
-    padding-inline-start: 0;
+    /* padding-inline-start: 0; */
+    padding: 0 20px;
+    position: relative;
   }
 
   .header__title {
@@ -277,10 +295,6 @@
   .section-what__articles-list {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .header__theme-menu-list {
-    flex-direction: row;
-  }
 }
 
 @media (width >= 1024px) {
@@ -291,5 +305,17 @@
 @media (width >= 1024px) {
   .section {
     column-gap: 30px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header__theme-menu {
+    padding-top: 20px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
   }
 }
