@@ -6,11 +6,11 @@
   color: var(--text-color);
   font-family: var(--font-family);
   background-color: var(--page-background-color);
-  background-image: var(--page-background-image) no-repeat top center;
+  background: var(--page-background-image) no-repeat top center;
   font-size: 18px;
   line-height: 23.4px;
   background-position: center;
-  background-size: cover 768px;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -151,8 +151,11 @@
 }
 
 .header__theme-menu {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  /*grid-template-rows: 1fr min-content 1fr;*/
   justify-self: center;
-  margin-block: 65px;
+  padding-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -193,7 +196,9 @@
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
-  margin-block: 55px;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  /* grid-template-rows: 1fr min-content 1fr;*/
   color: var(--highlight-color);
   background: var(--accent-color);
 }
@@ -209,6 +214,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+
   position: relative;
   text-align: center;
   height: 100vh;
@@ -228,21 +234,12 @@
     inset-inline-end: 28px;
     inset-block-start: 20px;
   }
-}
-
-@media (width >= 768px) {
   .page-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
-
-@media (width >= 768px) {
   .section {
     grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
   }
-}
-
-@media (width >= 768px) {
   .photo-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -257,9 +254,6 @@
   .photo-list__item:nth-child(3) {
     grid-row-start: span 2;
   }
-}
-
-@media (width >= 768px) {
   .section-what__articles-list {
     grid-column-start: span 2;
   }
@@ -294,20 +288,12 @@
   .section-what__articles-list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-@media (width >= 1024px) {
   .page-title {
     text-shadow: 4px 4px 0 var(--color-neon);
   }
-}
-@media (width >= 1024px) {
   .section {
     column-gap: 30px;
   }
-}
-
-@media (width < 768px) and (width >= 375px) {
   .header__theme-menu {
     padding-top: 20px;
   }
