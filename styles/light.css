@@ -16,7 +16,7 @@
   --text-color: var(--color-gray);
   --highlight-color: var(--color-gray);
   --secondary-color: var(--color-gray);
-  --secondary-color-1: var(--color-transparent_grey);
+  --secondary-color-grey: var(--color-transparent_grey);
   --rec-visibility: hidden;
 }
 
@@ -29,7 +29,7 @@
     --text-color: var(--color-gray);
     --highlight-color: var(--color-gray);
     --secondary-color: var(--color-gray);
-    --secondary-color-1: var(--color-transparent_grey);
+    --secondary-color-grey: var(--color-transparent_grey);
     --rec-visibility: hidden;
   }
 }
