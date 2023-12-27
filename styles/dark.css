@@ -12,7 +12,7 @@
   --page-background-color: var(--color-black);
   --page-background-image: url("../images/cover-image-dark.png");
   --highlight-color: var(--color-black);
-  --text-color: var(--color-neon);
+  --text-color: var(--color-pink);
   --brand-color: var(--color-purple);
   --secondary-color: var(--color-neon);
   --accent-color: var(--color-neon);
@@ -24,7 +24,7 @@
   :root {
     --page-background-color: var(--color-black);
     --page-background-image: url("../images/cover-image-dark.png");
-    --text-color: var(--color-neon);
+    --text-color: var(--color-pink);
     --brand-color: var(--color-purple);
     --secondary-color: var(--color-neon);
     --accent-color: var(--color-neon);
