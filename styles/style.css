@@ -55,7 +55,8 @@
 
 .header {
   align-items: start;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .header__theme-menu {
@@ -90,16 +91,17 @@
   outline: none;
 }
 
-.header__theme-menu-button_active {
-  border-color: currentColor;
-  cursor: default;
-  pointer-events: none;
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-button-color, #ff007066);
+  /*color: var(--color-neon); */
 }
 
-.header__theme-menu-button:hover {
-  /* border-color: var(--secondary-cherry, #ff007040);*/
-  outline: 1px solid var(--color-purple-cherry);
-  color: var(--color-neon);
+.header__theme-menu-button_active {
+  /*border-color: currentColor;
+  cursor: default;
+  pointer-events: none;*/
+  outline: 1px solid var(--color-neon, #ff0070);
+  pointer-events: none;
 }
 
 .header__title {
@@ -112,19 +114,25 @@
 }
 
 .link {
+  /* text-decoration: none;*/
   text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+  cursor: pointer;
 }
 
 .link:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  border-block-end: 1px solid;
 }
 
 .link:focus {
-  outline: 0;
+  /* outline: 0;*/
+  outline: none;
 }
 
 .link:focus-visible {
-  border: 1px solid;
+  /* border: 1px solid;*/
+  outline: 1px solid var(--color-pink, #f1b2ce);
 }
 
 .rec {
@@ -219,7 +227,8 @@
 
 .footer {
   place-items: center;
-  min-height: 100vh;
+  min-height: 668px;
+  height: 100vh;
 }
 
 @media (width <768px) {
@@ -274,6 +283,8 @@
   }
 
   .header__theme-menu {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
     margin-block-start: 170px;
     margin-block-end: 70px;
   }
@@ -302,7 +313,17 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-
+  /*.header__theme-menu {
+    /*justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
+  }*/
   .header__theme-menu {
     justify-self: center;
     margin-inline-start: 20px;
