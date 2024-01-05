@@ -3,7 +3,6 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -17,6 +16,7 @@
   --highlight-color: var(--color-gray);
   --secondary-color: var(--color-gray);
   --secondary-color-grey: var(--color-transparent_grey);
+  --hover-button-color: rgba(50, 49, 45, 0.4);
   --rec-visibility: hidden;
 }
 
@@ -30,6 +30,7 @@
     --highlight-color: var(--color-gray);
     --secondary-color: var(--color-gray);
     --secondary-color-grey: var(--color-transparent_grey);
+    --hover-button-color: rgba(50, 49, 45, 0.4);
     --rec-visibility: hidden;
   }
 }
