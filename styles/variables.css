@@ -20,6 +20,8 @@
   --color-gray: #353430;
   --color-transparent_grey: #35343040;
 
+  --hover-button-color: rgba(255, 0, 112, 0.4);
+
   --text-color: var(--color-pink);
   --brand-color: var(--color-purple);
   --secondary-color: var(--color-neon);
