@@ -17,6 +17,7 @@
   --secondary-color: var(--color-neon);
   --accent-color: var(--color-neon);
   --secondary-cherry: var(--color-purple-cherry);
+  --hover-button-color: rgba(255, 0, 112, 0.4);
   --rec-visibility: visible;
 }
 
