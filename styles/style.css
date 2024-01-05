@@ -313,17 +313,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /*.header__theme-menu {
-    /*justify-self: center;
-    margin-inline-start: 20px;
-    margin-block-start: 0;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
-    justify-self: center;
-    margin-inline-start: 20px;
-    margin-block-start: 0;
-    margin-block-end: 215px;
-  }*/
+
   .header__theme-menu {
     justify-self: center;
     margin-inline-start: 20px;
